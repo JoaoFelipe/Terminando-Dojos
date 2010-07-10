@@ -1,4 +1,4 @@
-function jokenpo (jogada1, jogada2) {
+function jokenpo (mao1, mao2) {
     var tabelaDeJogadas = {
     "pedra":{
         "pedra":"empate",
@@ -16,15 +16,20 @@ function jokenpo (jogada1, jogada2) {
         "tesoura":"empate"
     }
     };
-    return tabelaDeJogadas[jogada1][jogada2];
+    return tabelaDeJogadas[mao1][mao2];
 }
 
-function jogadorJokenpo(jogador1, jogada1, jogador2, jogada2)
-{
+function Jogada(nome, mao){
+    this.nomeDoJogador = nome
+    this.mao = mao
+}
 
-    if(jogada2 == "tesoura")
-        return "Pedro";
-    if(jogada2 == "pedra")
-        return "empate;"
-    return "João";
+function jogadorJokenpo(jogada1, jogada2)
+{
+    var resultado = jokenpo(jogada1.mao, jogada2.mao);
+    if (jogada1.mao == resultado)
+        return jogada1.nomeDoJogador;
+    if (jogada2.mao == resultado)
+        return jogada2.nomeDoJogador;
+    return "empate"
 }

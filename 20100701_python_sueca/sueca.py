@@ -39,12 +39,9 @@ def somatorio(jogadas):
     return sum([jogada.carta.valor for jogada in jogadas])
 
 def maior_carta(jogadas, trunfo):
-    jogadas_com_trunfo = [jogada for jogada in jogadas if jogada.carta.naipe == trunfo]
-    if jogadas_com_trunfo:
-        return max(jogadas_com_trunfo)
-    jogadas_com_carta_inicial = [jogada for jogada in jogadas if jogada.carta.naipe == jogadas[0].carta.naipe]     
-    return max(jogadas_com_carta_inicial)
-
+    jogadas_avaliadas = [jogada for jogada in jogadas if jogada.carta.naipe == trunfo] or [jogada for jogada in jogadas if jogada.carta.naipe == jogadas[0].carta.naipe]  
+    #Naipe Trunfo>Naipe inicial>Outros Naipes
+    return max(jogadas_avaliadas)
 
 def rodada(jogadas, trunfo):
     pontos_vencedor = somatorio(jogadas)

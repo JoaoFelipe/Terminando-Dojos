@@ -40,12 +40,33 @@ describe('Jokenpo', {
 describe('JogadorJokenpo', {
 
     'Pedro jogou Pedra x João jogou Tesoura, ganha Pedro': function() {
-        value_of(jogadorJokenpo({"pedra": "Pedro"}, {"tesoura": "João"})).should_be("Pedro");
+        var jogada1 = new Jogada("Pedro", "pedra" )
+        var jogada2 = new Jogada("João", "tesoura" )
+        var vencedor = "Pedro"
+        value_of(jogadorJokenpo(jogada1, jogada2)).should_be(vencedor);
     },
     'Pedro jogou Pedra x João jogou Papel, ganha João': function() {
-        value_of(jogadorJokenpo({"pedra": "Pedro"}, {"papel": "João"})).should_be("João");
+        var jogada1 = new Jogada("Pedro", "pedra" )
+        var jogada2 = new Jogada("João", "papel" )
+        var vencedor = "João"
+        value_of(jogadorJokenpo(jogada1, jogada2)).should_be(vencedor);
     },
     'Pedro jogou Pedra x João jogou Pedra, empate': function() {
-        value_of(jogadorJokenpo({"pedra": "Pedro"}, {"pedra": "João"})).should_be("empate");
+        var jogada1 = new Jogada("Pedro", "pedra" )
+        var jogada2 = new Jogada("João", "pedra" )
+        var vencedor = "empate"
+        value_of(jogadorJokenpo(jogada1, jogada2)).should_be(vencedor);
+    },
+    'Pedro jogou Tesoura x João jogou Pedra, ganha João': function() {
+        var jogada1 = new Jogada("Pedro", "tesoura" )
+        var jogada2 = new Jogada("João", "pedra" )
+        var vencedor = "João"
+        value_of(jogadorJokenpo(jogada1, jogada2)).should_be(vencedor);
+    },
+    'Pedro jogou Tesoura x João jogou Papel, ganha Pedro': function() {
+        var jogada1 = new Jogada("Pedro", "tesoura" )
+        var jogada2 = new Jogada("João", "papel" )
+        var vencedor = "Pedro"
+        value_of(jogadorJokenpo(jogada1, jogada2)).should_be(vencedor);
     }
 })
