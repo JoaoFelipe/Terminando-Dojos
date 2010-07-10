@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import unittest
 from jogo_da_velha import avalia_jogo
 
@@ -98,6 +99,46 @@ class TestJogoDaVelha(unittest.TestCase):
             ('', 'O', 'X'),
         ]
         self.assertEquals(avalia_jogo(entrada), 'O')
+        
+    def test_O_ganha_diagonal_1(self):
+        entrada = [
+            ('O', 'X', 'X'),
+            ('', 'O', ''),
+            ('', '', 'O'),
+        ]
+        self.assertEquals(avalia_jogo(entrada), 'O')
+        
+    def test_X_ganha_diagonal_1(self):
+        entrada = [
+            ('X', 'O', 'O'),
+            ('', 'X', ''),
+            ('', '', 'X'),
+        ]
+        self.assertEquals(avalia_jogo(entrada), 'X')
+
+    def test_O_ganha_diagonal_2(self):
+        entrada = [
+            ('X', 'X', 'O'),
+            ('', 'O', ''),
+            ('O', '', ''),
+        ]
+        self.assertEquals(avalia_jogo(entrada), 'O')
+        
+    def test_X_ganha_diagonal_2(self):
+        entrada = [
+            ('O', 'O', 'X'),
+            ('', 'X', ''),
+            ('X', '', ''),
+        ]
+        self.assertEquals(avalia_jogo(entrada), 'X')
+        
+    def test_velha(self):
+        entrada = [
+            ('O', 'X', 'X'),
+            ('X', 'O', 'O'),
+            ('X', 'O', 'X'),
+        ]
+        self.assertEquals(avalia_jogo(entrada), 'velha')
 
 if __name__ == '__main__':
     unittest.main()
