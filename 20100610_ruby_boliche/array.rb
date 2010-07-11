@@ -6,4 +6,8 @@ class Array
     end
     result
   end
+  
+  def in_range(i)
+    return i < self.length
+  end
 end
