@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from caminhada import calcula_caminho
 import unittest
 
@@ -62,5 +63,56 @@ class testProblem(unittest.TestCase):
             [6, 3, 7],
         ]
         self.assertEquals(calcula_caminho(entrada), [0, 0, 1])
-
+        
+    def test_matriz_3_x_3_retorna_lista_1_2_repeticao(self):
+        entrada = [
+            [1, 1, 4],
+            [3, 4, 2],
+            [6, 3, 7],
+        ]
+        self.assertEquals(calcula_caminho(entrada), [1, 2])
+   
+    def test_matriz_3_x_3_retorna_lista_0_1_1(self):
+        entrada = [
+            [1, 3, 4],
+            [3, 3, 2],
+            [6, 3, 7],
+        ]
+        self.assertEquals(calcula_caminho(entrada), [0, 1, 1])
+    
+    def test_matriz_3_x_3_retorna_lista_0_1_2_repeticao(self):
+        entrada = [
+            [1, 3, 4],
+            [3, 3, 2],
+            [6, 3, 3],
+        ]
+        self.assertEquals(calcula_caminho(entrada), [0, 1, 2])
+        
+    def test_matriz_1_x_3_retorna_lista_2(self):
+        entrada = [
+            [4, 3, 1],
+        ]
+        self.assertEquals(calcula_caminho(entrada), [2])
+        
+    def test_matriz_1_x_3_retorna_lista_1(self):
+        entrada = [
+            [4, 1, 3],
+        ]
+        self.assertEquals(calcula_caminho(entrada), [1])
+        
+    def test_matriz_1_x_3_retorna_lista_2_repeticao(self):
+        entrada = [
+            [4, 1, 1],
+        ]
+        self.assertEquals(calcula_caminho(entrada), [2])
+        
+        
+    def test_matriz_3_x_1_retorna_lista_0(self):
+        entrada = [
+            [4],
+            [1],
+            [2],
+        ]
+        self.assertEquals(calcula_caminho(entrada), [0])
+        
 unittest.main()
