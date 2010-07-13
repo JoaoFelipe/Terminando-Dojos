@@ -1,0 +1,44 @@
+Oblongular Number Spirals:
+
+Determinar uma espiral de numeros a partir de duas dimensões
+
+Ex:
+Entrada:
+         2 x 2
+Saida:
+          1 2
+          4 3
+
+Entrada:
+         3 x 3
+Saida:
+         1 2 3
+         8 9 4
+         7 6 5
+
+Entrada:
+         4 x 4
+Saida:
+       1  2  3 4
+      12 13 14 5
+      11 16 15 6
+      10  9  8 7
+
+Entrada:
+         4 x 3
+Saida:
+        1  2  3 
+       10 11  4 
+        9 12  5 
+        8  7  6 
+
+Entrada:
+         6 x 5
+Saida:
+      1  2  3  4  5
+     18 19 20 21  6
+     17 28 29 22  7
+     16 27 30 23  8
+     15 26 25 24  9
+     14 13 12 11 10
+  

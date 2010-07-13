@@ -1,0 +1,34 @@
+Sinuca (regra brasileira antiga)
+
+Opções de jogadas normais:
+-Acertar Bola da vez e não matar
+  Pontuacao continua a mesma
+  Jogada vai para o proximo jogador
+-Matar Bola da vez
+  Ganha pontos da bola da vez
+  Bola da vez passa a ser a proxima
+  Jogador ganha o direto de ir em qualquer bola
+  Jogada continua com o jogador
+-Acertar Bola Qualquer e não matar
+  Perde pontos da bola acertada
+  Jogada vai para o proximo jogador
+-Matar Bola Qualquer
+  Ganha pontos da bola
+  Jogador é obrigado a jogar na bola da vez na proxima jogada
+  Jogada continua com o jogador
+-Errar todas as bolas
+  Perde pontos da bola da vez
+  Jogada vai para o proximo jogador
+  
+Jogadas especiais
+-Obrigação de ir na bola da vez
+  Se Matar Bola Qualquer, perde os pontos da bola e a Jogada vai para o proximo jogador
+  Os outros casos continuam iguais (Acertar bola da vez e não matar, Matar bola da vez, Acertar bola qualquer e não matar e Errar todas as bolas)
+-Direito de ir em Bola Qualquer
+  Se Matar qualquer bola, incluindo bola da vez, ganha o ponto da bola, a bola volta para mesa (ou seja, a bola da vez continua sendo a mesma) e a jogada continua com o jogador
+  Se Acertar qualquer bola e não matar, não perde ponto nenhum e a jogada vai para o proximo jogador
+  O caso de errar continua igual
+  
+  
+Pontuação máxima em uma jogada = 112 pontos, pela sequência:
+Bola 7, Bola 1, Bola 7, Bola 7, Bola 2, Bola 7, Bola 7, Bola 3, Bola 7, Bola 7, Bola 4, Bola 7, Bola 7, Bola 5, Bola 7, Bola 7, Bola 6, Bola 7, Bola 7 
