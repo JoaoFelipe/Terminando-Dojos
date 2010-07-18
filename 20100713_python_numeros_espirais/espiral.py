@@ -12,14 +12,13 @@ sequencia_da_espiral = [
     linha_para_frente
 ]
 
-
 def in_range(matriz, i, j):
     return i >= 0 and j >= 0 and i < len(matriz) and j < len(matriz[0])
 
 def possivel(matriz, i, j):
     return in_range(matriz, i, j) and matriz[i][j] == 0
         
-def constroiSpiral(ordemI, ordemJ = 0):
+def numeros_espirais(ordemI, ordemJ = 0):
     if ordemJ == 0:
         ordemJ = ordemI
         
